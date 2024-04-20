@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF">
+  <link
+    name="upperBody">
+    <inertial>
+      <origin
+        xyz="5.4157E-05 -5.6436E-05 0.45014"
+        rpy="0 0 0" />
+      <mass
+        value="0.69458" />
+      <inertia
+        ixx="0.0016405"
+        ixy="-1.0555E-06"
+        ixz="-3.5849E-06"
+        iyy="0.00080381"
+        iyz="1.041E-07"
+        izz="0.0017758" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/upperBody.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/upperBody.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="upperRightLeg">
+    <inertial>
+      <origin
+        xyz="-0.0040697 -0.029523 -0.10457"
+        rpy="0 0 0" />
+      <mass
+        value="0.097368" />
+      <inertia
+        ixx="8.9886E-05"
+        ixy="6.8313E-08"
+        ixz="-1.7783E-07"
+        iyy="9.0572E-05"
+        iyz="-2.9441E-07"
+        izz="1.6415E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/upperRightLeg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/upperRightLeg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightHip"
+    type="revolute">
+    <origin
+      xyz="0 -0.04025 0.39425"
+      rpy="0 0 0" />
+    <parent
+      link="upperBody" />
+    <child
+      link="upperRightLeg" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1.0787"
+      velocity="6.9813" />
+  </joint>
+  <link
+    name="lowerRightLeg">
+    <inertial>
+      <origin
+        xyz="5.6613E-11 -0.022978 -0.15763"
+        rpy="0 0 0" />
+      <mass
+        value="0.17256" />
+      <inertia
+        ixx="0.00080105"
+        ixy="3.8419E-10"
+        ixz="-1.0083E-12"
+        iyy="0.0007918"
+        iyz="5.9669E-07"
+        izz="3.7266E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/lowerRightLeg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/lowerRightLeg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightKnee"
+    type="revolute">
+    <origin
+      xyz="0.0002 0 -0.15175"
+      rpy="0 0 0" />
+    <parent
+      link="upperRightLeg" />
+    <child
+      link="lowerRightLeg" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1.0787"
+      velocity="6.9813" />
+  </joint>
+  <link
+    name="upperLeftLeg">
+    <inertial>
+      <origin
+        xyz="-0.0040697 0.029523 -0.10457"
+        rpy="0 0 0" />
+      <mass
+        value="0.097368" />
+      <inertia
+        ixx="8.9887E-05"
+        ixy="-6.8315E-08"
+        ixz="-1.7808E-07"
+        iyy="9.0573E-05"
+        iyz="2.9445E-07"
+        izz="1.6415E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/upperLeftLeg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/upperLeftLeg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftHip"
+    type="revolute">
+    <origin
+      xyz="0 0.04025 0.39425"
+      rpy="0 0 0" />
+    <parent
+      link="upperBody" />
+    <child
+      link="upperLeftLeg" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1.0787"
+      velocity="6.9813" />
+  </joint>
+  <link
+    name="lowerLeftLeg">
+    <inertial>
+      <origin
+        xyz="5.1713E-11 0.022932 -0.15763"
+        rpy="0 0 0" />
+      <mass
+        value="0.17256" />
+      <inertia
+        ixx="0.00080105"
+        ixy="3.8419E-10"
+        ixz="-9.3344E-13"
+        iyy="0.0007918"
+        iyz="5.8062E-07"
+        izz="3.7266E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/lowerLeftLeg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/lowerLeftLeg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftKnee"
+    type="revolute">
+    <origin
+      xyz="0.0002 0 -0.15175"
+      rpy="0 0 0" />
+    <parent
+      link="upperLeftLeg" />
+    <child
+      link="lowerLeftLeg" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1.0787"
+      velocity="6.9813" />
+  </joint>
+  <link
+    name="rightRW">
+    <inertial>
+      <origin
+        xyz="-3.9575E-17 -0.017794 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.096474" />
+      <inertia
+        ixx="1.6889E-05"
+        ixy="-1.699E-24"
+        ixz="-9.8805E-24"
+        iyy="3.2633E-05"
+        iyz="-1.7777E-22"
+        izz="1.6889E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/rightRW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/rightRW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rrw"
+    type="continuous">
+    <origin
+      xyz="0 -0.0791 0.45655"
+      rpy="0 0 0" />
+    <parent
+      link="upperBody" />
+    <child
+      link="rightRW" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="leftRW">
+    <inertial>
+      <origin
+        xyz="-6.977E-17 0.017794 5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.096474" />
+      <inertia
+        ixx="1.6889E-05"
+        ixy="-2.3366E-23"
+        ixz="-2.0441E-23"
+        iyy="3.2633E-05"
+        iyz="1.9131E-21"
+        izz="1.6889E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/leftRW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/leftRW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lrw"
+    type="continuous">
+    <origin
+      xyz="0 0.0791 0.45655"
+      rpy="0 0 0" />
+    <parent
+      link="upperBody" />
+    <child
+      link="leftRW" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="centerRW">
+    <inertial>
+      <origin
+        xyz="0.017394 1.9432E-18 -1.1102E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.096474" />
+      <inertia
+        ixx="3.2633E-05"
+        ixy="-7.4288E-22"
+        ixz="-6.3098E-21"
+        iyy="1.6889E-05"
+        iyz="6.0558E-24"
+        izz="1.6889E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/centerRW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF/meshes/centerRW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="crw"
+    type="continuous">
+    <origin
+      xyz="0 0 0.5268"
+      rpy="0 0 0" />
+    <parent
+      link="upperBody" />
+    <child
+      link="centerRW" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+</robot>
