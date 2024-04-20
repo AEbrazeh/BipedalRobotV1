@@ -6,6 +6,9 @@
 ## Overview
 This repository contains all the materials related to my BSc final project at the University of Tehran, titled "Design, Simulation and Control of a 4-DoF Bipedal Robot for Balancing and Walking using intelligent-PID and Reinforcement Learning-based Controller". The project aims to develop a bipedal robot capable of maintaining balance and walking using advanced control systems.
 
+![]("https://github.com/AEbrazeh/BipedalRobotV1/blob/main/gifs/View1.gif"])
+![]("https://github.com/AEbrazeh/BipedalRobotV1/blob/main/gifs/View2.gif"])
+
 ## Features
 - **Intelligent Proportional-Integral-Derivative (PID) Control**: Fine-tuned PID parameters for stable balancing.
 - **Reinforcement Learning**: Utilized Twin Delayed DDPG (TD3) algorithm for efficient and robust walking patterns.
